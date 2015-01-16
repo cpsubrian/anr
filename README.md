@@ -93,3 +93,18 @@ Architecture
   - As cards are placed in the various zones, the opponents will know which cardId is
     where. When they initiate actions on unknown cards, the id is used.
 
+### Random Ideas
+
+- 'Lazy' Tournaments
+  - Swiss Rounds are played with timed matches, but indefinite time between matches.
+  - Whenever a round is complete, players will be matched up with their next opponent
+    and get emailed. They can log into the lobby and chat to set up a convenient
+    play time.
+- 'Timed' Tournaments
+  - Played like an IRL tournament.
+  - Strict breaks between matches with games automatically starting on a schedule.
+  - Missed games count as forfeits.
+- 'League' play
+  - Maximum number of scored games per week.
+  - Can play unlimited 'practice' games.
+  - Ladder rankings.

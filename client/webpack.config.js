@@ -17,7 +17,7 @@ module.exports = {
       path.resolve(__dirname, '..', 'bower_components')
     ],
     alias: {
-      scripts: path.join(__dirname, '/scripts'),
+      _: path.join(__dirname, '/scripts'),
       styles: path.join(__dirname, '/styles'),
       react: 'react/addons',
       'react/addons/lib': 'react/../lib', // A workaround for react/lib to be resolved correctly.

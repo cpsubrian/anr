@@ -1,8 +1,6 @@
-'use strict';
-
 var React = require('react')
   , cx = React.addons.classSet
-  , Icon = require('scripts/components/icon');
+  , Icon = require('_/components/icon');
 
 var App = React.createClass({
 

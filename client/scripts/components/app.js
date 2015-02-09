@@ -1,6 +1,7 @@
 'use strict';
 
-var React = require('react');
+var React = require('react')
+  , Icon = require('./icon');
 
 var App = React.createClass({
 
@@ -27,7 +28,7 @@ var App = React.createClass({
     return (
       <section className="App">
         <h1>Hello, world.</h1>
-        <p>This is my paragraph text.</p>
+        <p>This is my paragraph text <Icon type="eye"/></p>
         <button style={this.buttonStyle()} onClick={this.onClick}>Click Me</button>
       </section>
     );

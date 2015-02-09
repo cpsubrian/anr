@@ -19,7 +19,7 @@ module.exports = {
   ],
   resolve: {
     fallback: [
-      __dirname + '/bower_componenets'
+      path.resolve(__dirname, '..', 'bower_components')
     ],
     alias: {
       styles: __dirname + '/styles'
@@ -30,6 +30,8 @@ module.exports = {
     loaders: [
       { test: /\.css$/, loaders: ['style', 'css'] },
       { test: /\.js$/, loaders: ['react-hot', 'jsx?harmony'], exclude: /node_modules/ },
+      { test: /\.woff/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
+      { test: /\.(ttf|eot|svg)/, loader: "file-loader" }
     ]
   }
 };

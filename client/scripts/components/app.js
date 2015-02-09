@@ -2,7 +2,7 @@
 
 var React = require('react')
   , cx = React.addons.classSet
-  , Icon = require('components/icon');
+  , Icon = require('scripts/components/icon');
 
 var App = React.createClass({
 

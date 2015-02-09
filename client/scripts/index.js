@@ -1,8 +1,8 @@
 'use strict';
 
 var React = require('react')
-  , App = require('components/app')
-  , socket = require('socket');
+  , App = require('scripts/components/app')
+  , socket = require('scripts/socket');
 
 require('bootstrap/dist/css/bootstrap.css');
 require('fontawesome/css/font-awesome.css');

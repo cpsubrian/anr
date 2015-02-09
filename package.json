@@ -1,14 +1,16 @@
 {
   "name": "anr",
   "version": "0.0.1",
-  "private" : true,
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/cpsubrian/anr.git"
   },
   "devDependencies": {
+    "css-loader": "^0.9.1",
     "jsx-loader": "^0.12.2",
     "react-hot-loader": "^1.1.1",
+    "style-loader": "^0.8.3",
     "webpack": "^1.5.1",
     "webpack-dev-server": "1.6.4"
   },

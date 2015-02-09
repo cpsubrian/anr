@@ -1,11 +1,12 @@
 'use strict';
 
-var React = require('react');
+var React = require('react')
+  , _ = require('underscore');
 
 var Icon = React.createClass({
 
   render() {
-    var type = Object.keys(this.props)[0];
+    var type = _.first(_.keys(this.props));
     return (
       <i className={'fa fa-' + type}></i>
     );

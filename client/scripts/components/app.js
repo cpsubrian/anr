@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react')
+  , cx = React.addons.classSet
   , Icon = require('./icon');
 
 var App = React.createClass({
@@ -11,25 +12,25 @@ var App = React.createClass({
     };
   },
 
-  buttonStyle() {
-    return {
-      color: '#fff',
-      backgroundColor: this.state.clicked ? 'red' : 'cyan',
-      padding: 20
-    };
-  },
-
   onClick(e) {
     e.preventDefault();
     this.setState({clicked: !this.state.clicked});
   },
 
   render() {
+    var buttonClass = cx({
+      'btn': true,
+      'btn-primary': !this.state.clicked,
+      'btn-danger': this.state.clicked
+    });
+
     return (
       <section className="App">
         <h1>Hello, world.</h1>
-        <p>This is my paragraph text <Icon type="eye"/></p>
-        <button style={this.buttonStyle()} onClick={this.onClick}>Click Me</button>
+        <p>This is my paragraph text <Icon eye/></p>
+        <button className={buttonClass} onClick={this.onClick}>
+          Click Me
+        </button>
       </section>
     );
   }

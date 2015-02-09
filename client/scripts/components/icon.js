@@ -5,7 +5,7 @@ var React = require('react')
 
 var Icon = React.createClass({
 
-  render() {
+  render: function () {
     var type = _.first(_.keys(this.props));
     return (
       <i className={'fa fa-' + type}></i>

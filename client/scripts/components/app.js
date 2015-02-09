@@ -6,18 +6,18 @@ var React = require('react')
 
 var App = React.createClass({
 
-  getInitialState() {
+  getInitialState: function () {
     return {
       clicked: false
     };
   },
 
-  onClick(e) {
+  onClick: function (e) {
     e.preventDefault();
     this.setState({clicked: !this.state.clicked});
   },
 
-  render() {
+  render: function () {
     var buttonClass = cx({
       'btn': true,
       'btn-primary': !this.state.clicked,

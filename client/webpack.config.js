@@ -4,19 +4,14 @@ var webpack = require('webpack')
 module.exports = {
   devtool: 'eval',
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
     './scripts/index'
   ],
   output: {
-    path: __dirname,
-    filename: 'scripts/bundle.js',
-    publicPath: '/'
+    path: path.join(__dirname, 'build'),
+    filename: 'bundle.js',
+    publicPath: '/build/'
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
-  ],
+  plugins: [],
   resolve: {
     fallback: [
       path.resolve(__dirname, '..', 'bower_components')
@@ -32,9 +27,28 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.css$/, loaders: ['style', 'css'] },
-      { test: /\.js$/, loaders: ['react-hot', 'jsx?harmony'], exclude: /node_modules/ },
+      { test: /\.js$/, loaders: ['jsx?harmony'], exclude: /node_modules/ },
       { test: /\.woff/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
       { test: /\.(ttf|eot|svg)/, loader: "file-loader" }
     ]
   }
 };
+
+// Setup hot realod.
+if (global.hot) {
+  module.exports.entry = [
+    'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server'
+  ].concat(module.exports.entry);
+
+  module.exports.plugins = [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ].concat(module.exports.plugins);
+
+  module.exports.module.loaders.forEach(function (loader) {
+    if (loader.test === /\.js$/) {
+      loader.loaders.unshift('react-hot');
+    }
+  });
+}

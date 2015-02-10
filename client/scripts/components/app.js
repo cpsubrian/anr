@@ -1,35 +1,35 @@
 var React = require('react')
-  , cx = React.addons.classSet
-  , Icon = require('_/components/icon');
+  , Panel = require('_/components/panel')
+  , Stats = require('_/components/stats')
+  , Table = require('_/components/table')
+  , Flow = require('_/components/flow')
+  , Chat = require('_/components/chat');
 
 var App = React.createClass({
 
-  getInitialState: function () {
-    return {
-      clicked: false
-    };
-  },
-
-  onClick: function (e) {
-    e.preventDefault();
-    this.setState({clicked: !this.state.clicked});
-  },
-
   render: function () {
-    var buttonClass = cx({
-      'btn': true,
-      'btn-primary': !this.state.clicked,
-      'btn-danger': this.state.clicked
-    });
-
     return (
-      <section className="App">
-        <h1>Hello, world.</h1>
-        <p>This is my paragraph text.</p>
-        <button className={buttonClass} onClick={this.onClick}>
-          Click Me <Icon eye/>
-        </button>
-      </section>
+      <Panel className="app">
+        <Panel title="Stats" flow="vertical">
+          <Panel title="Opponent">
+            <Stats/>
+          </Panel>
+          <Panel title="You">
+            <Stats/>
+          </Panel>
+        </Panel>
+        <Panel title="Table">
+          <Table/>
+        </Panel>
+        <Panel title="Actions" flow="vertical">
+          <Panel title="Flow">
+            <Flow/>
+          </Panel>
+          <Panel title="Chat">
+            <Chat/>
+          </Panel>
+        </Panel>
+      </Panel>
     );
   }
 });

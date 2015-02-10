@@ -1,9 +1,63 @@
+/* General
+ ******************************************************************************/
 * {
   box-sizing: border-box;
 }
-body {
-  margin: 0 auto;
-  padding: 40px;
-  max-width: 1000px;
+html, body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   background: #f8f8f8;
+}
+
+/* Panels
+ ******************************************************************************/
+.panel {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+.panel .panel-heading {
+
+}
+.panel .panel-title {
+
+}
+.panel .panel-body {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+.panel .panel-body > * {
+  flex: 1;
+}
+
+/* Flow Horizontal */
+.panel.flow-horizontal .panel-body {
+  flex-direction: row;
+}
+.panel.flow-horizontal .panel-body > * {
+  margin-right: 10px;
+}
+.panel.flow-horizontal .panel-body > *:last-child {
+  margin-right: 0;
+}
+
+/* Flow Vertical */
+.panel.flow-vertical .panel-body {
+  flex-direction: column;
+}
+.panel.flow-vertical .panel-body > * {
+  margin-bottom: 10px;
+}
+.panel.flow-vertical .panel-body > *:last-child {
+  margin-bottom: 0;
+}
+
+/* App
+ ******************************************************************************/
+.app {
+  height: 100%;
 }

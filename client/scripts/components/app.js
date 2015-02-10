@@ -25,9 +25,9 @@ var App = React.createClass({
     return (
       <section className="App">
         <h1>Hello, world.</h1>
-        <p>This is my paragraph text <Icon eye/></p>
+        <p>This is my paragraph text.</p>
         <button className={buttonClass} onClick={this.onClick}>
-          Click Me
+          Click Me <Icon eye/>
         </button>
       </section>
     );

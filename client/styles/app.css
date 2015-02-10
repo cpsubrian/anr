@@ -35,24 +35,24 @@ html, body {
 }
 
 /* Flow Horizontal */
-.panel.flow-horizontal .panel-body {
+.panel.flow-horizontal > .panel-body {
   flex-direction: row;
 }
-.panel.flow-horizontal .panel-body > * {
+.panel.flow-horizontal > .panel-body > * {
   margin-right: 10px;
 }
-.panel.flow-horizontal .panel-body > *:last-child {
+.panel.flow-horizontal > .panel-body > *:last-child {
   margin-right: 0;
 }
 
 /* Flow Vertical */
-.panel.flow-vertical .panel-body {
+.panel.flow-vertical > .panel-body {
   flex-direction: column;
 }
-.panel.flow-vertical .panel-body > * {
+.panel.flow-vertical > .panel-body > * {
   margin-bottom: 10px;
 }
-.panel.flow-vertical .panel-body > *:last-child {
+.panel.flow-vertical > .panel-body > *:last-child {
   margin-bottom: 0;
 }
 

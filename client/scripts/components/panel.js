@@ -2,14 +2,8 @@ var React = require('react');
 
 var Panel = React.createClass({
 
-  getDefaultProps: function () {
-    return {
-      flow: 'horizontal'
-    }
-  },
-
   render: function () {
-    var classes = ['panel',  'panel-default', 'flow-' + this.props.flow];
+    var classes = ['panel',  'panel-default', 'flow-' + (this.props.vertical ? 'vertical' : 'horizontal')];
     if (this.props.className) {
       classes.push(this.props.className);
     }

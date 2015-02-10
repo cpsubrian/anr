@@ -10,7 +10,7 @@ var App = React.createClass({
   render: function () {
     return (
       <Panel className="app">
-        <Panel title="Stats" flow="vertical" width="150px">
+        <Panel title="Stats" vertical width="150px">
           <Panel title="Opponent">
             <Stats/>
           </Panel>
@@ -21,7 +21,7 @@ var App = React.createClass({
         <Panel title="Table">
           <Table/>
         </Panel>
-        <Panel title="Actions" flow="vertical" width="300px">
+        <Panel title="Actions" vertical width="300px">
           <Panel title="Flow">
             <Flow/>
           </Panel>

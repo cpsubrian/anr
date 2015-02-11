@@ -7,15 +7,28 @@ var React = require('react')
 
 var App = React.createClass({
 
+  getInitialState: function () {
+    return {
+      players: {
+        you: {
+          type: 'runner'
+        },
+        opponent: {
+          type: 'corp'
+        }
+      }
+    };
+  },
+
   render: function () {
     return (
       <Panel className="app">
         <Panel title="Stats" vertical width="150px">
           <Panel title="Opponent">
-            <Stats/>
+            <Stats player={this.state.players.opponent}/>
           </Panel>
           <Panel title="You">
-            <Stats/>
+            <Stats player={this.state.players.you}/>
           </Panel>
         </Panel>
         <Panel title="Table">

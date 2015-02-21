@@ -5,6 +5,8 @@ var React = require('react')
 // Load styles.
 require('bootstrap/dist/css/bootstrap.css');
 require('fontawesome/css/font-awesome.css');
+require('styles/netrunner.css');
+require('styles/nrdb.css');
 require('styles/app.css');
 
 // Render app.
